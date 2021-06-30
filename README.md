@@ -1,16 +1,14 @@
 # Портфельная теория Марковица
 
 ### Задача
-Построить оптимизационный портфель минимального риска из акций компаний индекса Доу-Джонса с использованием опционов. 
+Построить портфель минимального риска, задача отличается от классической тем, что мы берем не только актив, но и опцион на него. 
 
-### Используемые библиотеки
-- [numpy](https://numpy.org/), [scipy](https://www.scipy.org/): вычисления
-- [pandas](https://pandas.pydata.org/): работа с данными
-- [matplotlib](https://matplotlib.org/), [plotly](https://plotly.com/python/): визуализация
-- [gurobipy](https://www.gurobi.com/): оптимизация
+### Библиотеки
+- numpy, scipy, matplotlib
+- [gurobipy](https://www.gurobi.com/): для оптимизации модели (платная, но есть бесплатная подписка для студентов)
 - [Alpha Vantage](https://www.alphavantage.co/documentation/): API для данных
 - [requests](https://requests.readthedocs.io/en/master/): запросы к Alpha Vantage
-- [Prophet](https://facebook.github.io/prophet/docs/quick_start.html#python-api): прогнозирование временных рядов
+- [Prophet](https://facebook.github.io/prophet/docs/quick_start.html#python-api): для прогнозирования временного ряда
 
 ### Система файлов
 - [reader.py](https://github.com/armeni/portfolio/blob/main/reader.py): чтение и предобработка даных. 
@@ -19,7 +17,7 @@
 
 - [calculator.py](https://github.com/armeni/portfolio/blob/main/calculator.py): расчет необходимых значений для оптимизации (ожидаемая доходность портфеля, волатильность, риск порфтеля, стоимость опциона пут, ковариационная матрица).
 
-- [forecast.ipynb](https://github.com/armeni/portfolio/blob/main/forecast.ipynb): прогнозирование цен акций компаний на месяц.
+- [forecast.ipynb](https://github.com/armeni/portfolio/blob/main/forecast.ipynb): прогнозирование цены акций компаний на месяц.
 
 - [optimization.ipynb](https://github.com/armeni/portfolio/blob/main/optimization.ipynb): создание оптимизионной модели, вывод результатов.
 
